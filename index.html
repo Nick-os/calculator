@@ -13,18 +13,9 @@
     <script src="https://www.google.com/jsapi"></script>
     <link rel="stylesheet" href="applab/applab.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-	    body{
-		    background-color:"#000000";
-	    }
-	    #divApplab{
-		      display: flex;
-  		      justify-content: center;
-	    }
-    </style>
   </head>
-  <body style='background-color:"#000000";'>
-    <div id="divApplab" class="appModern running" tabindex="1" style="width: 320px;height: 450px; display: flex; justify-content: center;"><div class="screen" tabindex="1" data-theme="default" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);"></div></div>
+  <body style='background-color:#000000;'>
+    <div id="divApplab" class="appModern running" tabindex="1" style="width: 320px;height: 450px;position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);"><div class="screen" tabindex="1" data-theme="default" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);"></div></div>
 	<script>var SpeechRecognition=SpeechRecognition||webkitSpeechRecognition,recognition=new SpeechRecognition;recognition.continuous=!0,recognition.onstart=function(){console.log("We are listening. Try speaking into the microphone.")},recognition.onspeechend=function(){recognition.stop()},recognition.onresult=function(e){var n,t=e.results[e.results.length-1][0].transcript;e.results[0][0].confidence;t=t.split(" ");for(var o=0;o<t.length;o++)n=Number(t[o]),isNaN(n)&&(console.log(n,t),"δύο"==t[o]?n=2:"x"==t[o]?n="x":"+"==t[o]?n="+":"-"==t[o]?n="-":"/"==t[o]?n="/":"X"==t[o]?n="x":"συν"==t[o]?n="+":"πλην"==t[o]?n="-":"δια"==t[o]?n="/":"ίσον"==t[o]?(document.getElementById("equal").click(),n=""):"clear"==t[o]?(document.getElementById("clear").click(),n=""):"delete"==t[o]?(document.getElementById("rub").click(),n=""):"equal"==t[o]?(document.getElementById("equal").click(),n=""):n=""),""!=t[o]&&(document.getElementById("result").innerText=document.getElementById("result").innerText+n)},recognition.start();</script>
   </body>
 </html>
